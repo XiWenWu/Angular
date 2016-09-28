@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body ng-app="">
+		<div ng-init="person={firstName:'Tom',lastName:'Jime'}">
+			<p>全名是：{{person.firstName+"."+person.lastName}}</p>
+		</div>
+		<div ng-init="dog={type1:'hehe',type2:'dada'}">
+			<p>全名是：<span ng-bind="dog.type1+'.'+dog.type2"></span></p>
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>

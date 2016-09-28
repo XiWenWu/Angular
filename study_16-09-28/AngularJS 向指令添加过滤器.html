@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src=""></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<p>循环对象：</p>
+		<ul>
+			<li ng-repeat="x in names | orderBy:'country'">
+				{{x.name+" "+x.country}}
+			</li>
+		</ul>
+		<script>
+		var app=angular.module("myApp",[]);
+		app.controller("myCtrl", function($scope){
+			$scope.names=[
+				{name:"One",country:"MmmmOne"},
+				{name:"Two",country:"CcccTwo"},
+				{name:"Three",country:"ZzzzThree"},
+				{name:"Four",country:"XxxxFour"}
+			]
+		});
+		</script>
+	</body>
+</html>

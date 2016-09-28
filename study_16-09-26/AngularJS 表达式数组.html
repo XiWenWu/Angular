@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body ng-app="">
+		<div ng-init="test1=[1,2,3,4,5,6]">
+			<p>数组的第三个元素{{"test1[2] = "+test1[2]}}</p>
+		</div>
+		<div ng-init="test2=[9,8,7,6,5,4]">
+			<p>数组的第二个元素test2[1]=<span ng-bind="test2[1]"></span></p>
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>

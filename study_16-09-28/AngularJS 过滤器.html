@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+		<script src="personController.js"></script>
+	</head>
+	<!--
+	
+	-->
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div>
+			<!--
+				uppercase 过滤器将字符串格式化为大写
+				lowercase 过滤器将字符串格式化为小写
+			-->
+			<p>姓名：{{lastName | uppercase}}</p>
+		</div>
+	</body>
+</html>

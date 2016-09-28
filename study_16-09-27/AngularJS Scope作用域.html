@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="angular.min.js"></script>
+	</head>
+	<!--
+	Scope(作用域) 是应用在 HTML (视图) 和 JavaScript (控制器)之间的纽带。
+
+	Scope 是一个对象，有可用的方法和属性。
+
+	Scope 可应用在视图和控制器上。
+
+	AngularJS 应用组成如下：
+
+    View(视图), 即 HTML。
+    Model(模型), 当前视图中可用的数据。
+    Controller(控制器), 即 JavaScript 函数，可以添加或修改属性。
+
+	-->
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<!--当你在 AngularJS 创建控制器时，你可以将 $scope 对象当作一个参数传递:-->
+		<div>
+			<h1>{{carname}}</h1>
+		</div>
+		<script>
+		var app=angular.module("myApp", []);
+		app.controller("myCtrl", function($scope){
+			$scope.carname="B M W"
+		});
+		</script>
+		<p>控制器中创建一个属性名 "carname"，对应了视图中使用 "{{ }}" 中的名称。</p>
+	</body>
+	</html>

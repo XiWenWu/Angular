@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<!--
+	AngularJS 指令是扩展的 HTML 属性，带有前缀 ng-。
+
+	ng-app 指令初始化一个 AngularJS 应用程序。
+
+	ng-init 指令初始化应用程序数据。
+
+	ng-model 指令把元素值（比如输入域的值）绑定到应用程序。
+	-->
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div ng-app="" ng-init="firstName='Tom'">
+			<p>Name:<input type="test" ng-model="firstName"></p>
+			<p>You add Name is {{firstName}}</p>
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>

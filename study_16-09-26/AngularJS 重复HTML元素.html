@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<!--
+	AngularJS 指令是扩展的 HTML 属性，带有前缀 ng-。
+
+	ng-app 指令初始化一个 AngularJS 应用程序。
+
+	ng-init 指令初始化应用程序数据。
+
+	ng-model 指令把元素值（比如输入域的值）绑定到应用程序。
+	-->
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body ng-app="">
+		<div ng-init="allName=['Tom','Lily','Lucy','Hege']">
+			<p>使用 ng-repeat 来循环数组</p>
+			<ul>
+				<li ng-repeat="nono in allName">  
+					{{nono}}
+				</li>
+			</ul>
+		</div>
+		<!--
+		ng-repeat 指令用在一个对象数组上：
+		-->
+		<div ng-init="msg=[
+		{name:'Tom',age:22},
+		{name:'Lily',age:18},
+		{name:'Lucy',age:19}
+		]">
+		<p>循环对象</p>
+		<ul>
+			<li ng-repeat="imf in msg">
+				{{imf.name+" "+imf.age}}
+			</li>
+		</ul>
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>
